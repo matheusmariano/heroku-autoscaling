@@ -1,2 +1,2 @@
-require('./services/environment');
+require('./bootstrap');
 require('./services/routing');
