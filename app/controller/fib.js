@@ -1,10 +1,13 @@
 const uuid = require('uuid/v1');
 const co = require('co');
 const amqp = require('../services/amqp');
+const heroku = require('../services/heroku');
 
 module.exports = {
   calculate: (request, response) => {
     const wrapper = co.wrap(function * () {
+      const dyno = yield heroku.createDyno();
+
       const connection = yield amqp.connect();
 
       const channel = yield connection.createChannel()
@@ -28,6 +31,8 @@ module.exports = {
           const result = message.content.toString();
 
           console.log(` [.] Got ${result}.`);
+
+          heroku.stopDyno(dyno.id);
 
           connection.close();
 

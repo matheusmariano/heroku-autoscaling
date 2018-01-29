@@ -1,7 +1,7 @@
 {
   "name": "dyno-crysis",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "app/index.js",
   "author": "Matheus Mariano <vmatheus.mariano@gmail.com>",
   "license": "MIT",
   "private": true,
@@ -11,6 +11,7 @@
     "co": "^4.6.0",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
+    "heroku-client": "^3.0.6",
     "uuid": "^3.2.1"
   }
 }
