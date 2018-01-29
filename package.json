@@ -1,0 +1,12 @@
+{
+  "name": "dyno-crysis",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Matheus Mariano <vmatheus.mariano@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2"
+  }
+}
